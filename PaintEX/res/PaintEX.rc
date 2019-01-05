@@ -1,0 +1,319 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_F5                  ICON                    "F5c.ico"
+
+IDI_PAINTEX             ICON                    "PaintEX.ico"
+
+IDI_SMALL               ICON                    "small.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_PAINTEX MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open\tCtrl+O",               ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "Save &As\tCtrl+A",            ID_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR, CHECKED
+        MENUITEM "S&tatus bar",                 ID_VIEW_STATUSBAR, CHECKED
+        MENUITEM SEPARATOR
+        POPUP "&Zoom"
+        BEGIN
+            MENUITEM "Zoom &In",                    ID_ZOOM_ZOOMIN
+            MENUITEM "Zoom &Out",                   ID_ZOOM_ZOOMOUT
+            MENUITEM SEPARATOR
+            MENUITEM "Custom Zoom....",             IDC_ZOOM_SCALE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Grid",                        ID_VIEW_GRID, CHECKED
+        MENUITEM "Ruler",                       ID_VIEW_RULER, CHECKED
+    END
+    POPUP "&Draw"
+    BEGIN
+        MENUITEM "Line",                        ID_DRAW_LINE
+        MENUITEM "Rectangle",                   ID_DRAW_RECTANGLE
+        MENUITEM "Rounded Rectangle",           ID_DRAW_ROUNDEDRECTANGLE
+        MENUITEM SEPARATOR
+        MENUITEM "Circle",                      ID_DRAW_CIRCLE
+        MENUITEM "Triangle",                    ID_DRAW_TRIANGLE
+        MENUITEM "Right Triangle",              ID_DRAW_RIGHTTRIANGLE
+        MENUITEM SEPARATOR
+        MENUITEM "Text",                        ID_DRAW_TEXT
+        MENUITEM SEPARATOR
+        MENUITEM "Select Objects",              ID_DRAW_SELECTOBJECTS, CHECKED
+        MENUITEM "Fill ...",                    ID_DRAW_FILL
+    END
+    POPUP "&Color"
+    BEGIN
+        MENUITEM "Edit Color",                  ID_COLOR_EDITCOLOR
+    END
+    POPUP "&Pencil"
+    BEGIN
+        MENUITEM "&Edit Pencil",                ID_PEN_EDITPEN
+    END
+    POPUP "&Font..."
+    BEGIN
+        MENUITEM "&Edit Font ",                 IDM_FONT
+    END
+    POPUP "&Rotate"
+    BEGIN
+        MENUITEM "90  degree ",                 ID_ROTATE_90
+        MENUITEM "180 degree",                  ID_ROTATE_180
+        MENUITEM "270 degree",                  ID_ROTATE_270
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_PAINTEX ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "C",            IDD_COPY,               VIRTKEY, CONTROL, NOINVERT
+    "X",            IDD_CUT,                VIRTKEY, CONTROL, NOINVERT
+    "V",            IDD_PASTE,              VIRTKEY, CONTROL, NOINVERT
+    "Z",            IDD_UNDO,               VIRTKEY, CONTROL, NOINVERT
+    "/",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    "?",            IDM_ABOUT,              ASCII,  ALT, NOINVERT
+    VK_F5,          IDM_REFRESH,            VIRTKEY, NOINVERT
+    "A",            IDM_SELECTALL,          VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          IDM_ABOUT,              VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 40, 40, 474, 316
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PaintEX About.. "
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDI_F5,IDC_STATIC,13,279,21,20,SS_CENTERIMAGE
+    LTEXT           "PaintDEMO, Version 1.0",IDC_STATIC,46,279,77,8,SS_NOPREFIX | SS_REALSIZECONTROL
+    LTEXT           "Nguyen Van Tuyen",IDC_STATIC,45,292,89,8
+    CONTROL         IDB_VIETNAM,IDC_STATIC,"Static",SS_BITMAP,19,25,435,226
+END
+
+IDD_EditPen DIALOGEX 40, 40, 211, 124
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Edit Pencil"
+FONT 10, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,115,108,37,12
+    PUSHBUTTON      "Cancel",IDCANCEL,164,107,40,13
+    CONTROL         "Tiny",IDC_SIZE1,"Button",BS_AUTORADIOBUTTON | BS_CENTER | WS_GROUP,14,23,85,7
+    CONTROL         "Medium",IDC_SIZE2,"Button",BS_AUTORADIOBUTTON | BS_CENTER,14,39,85,7
+    CONTROL         "Large",IDC_SIZE3,"Button",BS_AUTORADIOBUTTON | BS_CENTER,14,54,85,7
+    CONTROL         "Huge",IDC_SIZE4,"Button",BS_AUTORADIOBUTTON | BS_CENTER,14,70,85,7
+    CONTROL         "Gigantic",IDC_SIZE5,"Button",BS_AUTORADIOBUTTON | BS_CENTER,14,89,85,7
+    GROUPBOX        "Size Pencil",IDC_STATIC,7,7,93,99,WS_GROUP
+    GROUPBOX        "Style Pencil",IDC_STATIC1,109,7,95,100,WS_GROUP
+    CONTROL         "  ______________",IDB_STYLE1,"Button",BS_AUTORADIOBUTTON | BS_CENTER | WS_GROUP,117,24,88,7
+    CONTROL         " - - - - - - - - - - -",IDB_STYLE2,"Button",BS_AUTORADIOBUTTON | BS_CENTER,117,44,88,7
+    CONTROL         "- * - * - * - * -",IDB_STYLE3,"Button",BS_AUTORADIOBUTTON | BS_CENTER,117,65,88,7
+END
+
+IDD_NEW DIALOGEX 60, 60, 183, 54
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PaintEX New"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDYES,7,33,50,14
+    PUSHBUTTON      "No",IDNO,64,33,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,127,33,50,14
+    LTEXT           "Ban co muon luu lai file nay khong???",IDC_STATIC,31,15,118,8,SS_CENTERIMAGE
+END
+
+IDC_ZOOM_SCALE DIALOGEX 50, 50, 317, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Zoom Custom Box"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,186,124,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,260,124,50,14
+    GROUPBOX        "Choose Size",IDC_STATIC,7,7,135,97
+    CONTROL         "400%",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,25,42,53,10
+    CONTROL         "800%",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,26,20,53,10
+    CONTROL         "200%",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,25,63,53,10
+    CONTROL         "100%",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,25,83,53,10
+    GROUPBOX        "Custom Size",IDC_STATIC,158,7,135,97
+    EDITTEXT        IDC_SIZE_CUSTOM,208,27,63,14,ES_AUTOHSCROLL
+    LTEXT           "Custom Size",IDC_STATIC,161,30,45,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 467
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 309
+    END
+
+    IDD_EditPen, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 7
+    END
+
+    IDD_NEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDC_ZOOM_SCALE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 138
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_VIETNAM             BITMAP                  "vietnam.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_APP_TITLE           "PaintEX"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_PAINTEX             "PAINTEX"
+END
+
+STRINGTABLE
+BEGIN
+    IDD_COPY                "Copy\nCOPY"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

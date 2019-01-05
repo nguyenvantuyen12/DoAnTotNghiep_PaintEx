@@ -1,0 +1,9 @@
+﻿  PaintEX.cpp
+e:\thuctap\project_mock\mock\paintex\source\cshapeex.h(20): warning C4091: 'extern ': ignored on left of 'MODE_SHAPEEX' when no variable is declared
+e:\thuctap\project_mock\mock\paintex\source\cshapeex.h(28): warning C4091: 'extern ': ignored on left of 'ROTATE_DEGREE' when no variable is declared
+e:\thuctap\project_mock\mock\paintex\source\cshapeex.h(37): warning C4091: 'extern ': ignored on left of 'PEN_WIDTH' when no variable is declared
+e:\thuctap\project_mock\mock\paintex\source\cshapeex.h(51): warning C4091: 'extern ': ignored on left of 'MODE_EDIT' when no variable is declared
+e:\thuctap\project_mock\mock\paintex\source\crulerex.h(11): warning C4005: 'TICKERLEVEL2': macro redefinition
+  e:\thuctap\project_mock\mock\paintex\source\cshapeex.h(3): note: see previous definition of 'TICKERLEVEL2'
+  PaintEX.vcxproj -> E:\Thuctap\Project_MOCK\MOCK\Debug\PaintEX.exe
+  PaintEX.vcxproj -> E:\Thuctap\Project_MOCK\MOCK\Debug\PaintEX.pdb (Full PDB)
